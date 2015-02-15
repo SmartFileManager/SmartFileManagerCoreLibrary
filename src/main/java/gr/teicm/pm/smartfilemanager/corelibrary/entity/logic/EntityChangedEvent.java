@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.teicm.pm.smartfilemanager.smartfilemanagercorelibrary.entity.logic;
+package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic;
 
 /**
  *
  * @author ToNio
  */
-public interface EntityChangedListener {
+public class EntityChangedEvent {
 
-    public void entityChanged(EntityChangedEvent event);
+    public EntityChangedEvent(EntityInterface entity) {
+
+    }
 
 }

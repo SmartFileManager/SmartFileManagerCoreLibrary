@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.teicm.pm.smartfilemanager.smartfilemanagercorelibrary.entity.logic;
+package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic;
 
 /**
  *
  * @author ToNio
  */
-public class EntityCopyCutFailedException extends Exception {
+public class EntityDeletionFailedException extends Exception {
 
     private EntityInterface entity;
     private String reason;
 
-    public EntityCopyCutFailedException(EntityInterface entity, String reason) {
+    public EntityDeletionFailedException(EntityInterface entity, String reason) {
 
     }
 

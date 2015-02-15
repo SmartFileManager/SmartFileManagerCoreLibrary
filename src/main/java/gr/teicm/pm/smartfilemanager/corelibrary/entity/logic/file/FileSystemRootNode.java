@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.teicm.pm.smartfilemanager.smartfilemanagercorelibrary.entity.logic.file;
+package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.file;
 
 import java.io.IOException;
 import java.nio.file.FileSystems;

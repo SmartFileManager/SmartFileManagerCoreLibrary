@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.teicm.pm.smartfilemanager.smartfilemanagercorelibrary.entity.logic.file;
+package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.file;
 
 import java.io.IOException;
 import java.nio.file.DirectoryIteratorException;
@@ -18,7 +18,7 @@ import java.util.List;
  *
  * @author ToNio
  */
-abstract public class AbstractFile implements gr.teicm.pm.smartfilemanager.smartfilemanagercorelibrary.entity.logic.EntityInterface {
+abstract public class AbstractFile implements gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.EntityInterface {
 
     protected AbstractFile parent;
     protected String name;
@@ -118,5 +118,5 @@ abstract public class AbstractFile implements gr.teicm.pm.smartfilemanager.smart
 
     abstract protected String getFullName();
 
-    abstract protected List<AbstractFile> getAllChildren() throws gr.teicm.pm.smartfilemanager.smartfilemanagercorelibrary.entity.logic.EntityNotFolderishException;
+    abstract protected List<AbstractFile> getAllChildren() throws gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.EntityNotFolderishException;
 }

@@ -3,23 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.teicm.pm.smartfilemanager.smartfilemanagercorelibrary.entity.logic;
+package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic;
 
 /**
  *
  * @author ToNio
  */
-public class EntityNotFolderishException extends Exception {
+public class EntityRenameFailedException extends Exception {
 
     private EntityInterface entity;
     private String reason;
 
-    public EntityNotFolderishException(EntityInterface entity, String reason) {
-        this.entity = entity;
-        this.reason = reason;
-    }
+    public EntityRenameFailedException(EntityInterface entity, String reason) {
 
-    public EntityNotFolderishException() {
     }
 
     public EntityInterface getEntity() {

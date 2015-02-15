@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.teicm.pm.smartfilemanager.smartfilemanagercorelibrary.entity.logic.file;
+package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.file;
 
-import gr.teicm.pm.smartfilemanager.smartfilemanagercorelibrary.entity.logic.EntityNotFolderishException;
+import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.EntityNotFolderishException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Date;
