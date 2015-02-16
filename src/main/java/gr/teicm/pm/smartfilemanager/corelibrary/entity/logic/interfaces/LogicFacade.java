@@ -5,7 +5,6 @@
  */
 package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces;
 
-import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.EntityChangedListener;
 import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity;
 import java.util.Collection;
 
