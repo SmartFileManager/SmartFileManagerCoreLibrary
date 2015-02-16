@@ -12,7 +12,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.EntityNotFolderishException;
+import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.exceptions.EntityNotFolderishException;
 
 /**
  *

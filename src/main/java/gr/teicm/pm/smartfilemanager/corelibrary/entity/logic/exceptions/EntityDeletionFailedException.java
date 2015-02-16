@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic;
+package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.exceptions;
+
+import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity;
 
 /**
  *
@@ -11,14 +13,14 @@ package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic;
  */
 public class EntityDeletionFailedException extends Exception {
 
-    private EntityInterface entity;
+    private IEntity entity;
     private String reason;
 
-    public EntityDeletionFailedException(EntityInterface entity, String reason) {
+    public EntityDeletionFailedException(IEntity entity, String reason) {
 
     }
 
-    public EntityInterface getEntity() {
+    public IEntity getEntity() {
         return this.entity;
     }
 

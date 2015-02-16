@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic;
+package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.exceptions;
+
+import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity;
 
 /**
  *
@@ -11,10 +13,10 @@ package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic;
  */
 public class EntityNotFolderishException extends Exception {
 
-    private EntityInterface entity;
+    private IEntity entity;
     private String reason;
 
-    public EntityNotFolderishException(EntityInterface entity, String reason) {
+    public EntityNotFolderishException(IEntity entity, String reason) {
         this.entity = entity;
         this.reason = reason;
     }
@@ -22,7 +24,7 @@ public class EntityNotFolderishException extends Exception {
     public EntityNotFolderishException() {
     }
 
-    public EntityInterface getEntity() {
+    public IEntity getEntity() {
         return this.entity;
     }
 

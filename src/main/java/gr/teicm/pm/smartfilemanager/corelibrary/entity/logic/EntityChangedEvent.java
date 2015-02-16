@@ -5,13 +5,15 @@
  */
 package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic;
 
+import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity;
+
 /**
  *
  * @author ToNio
  */
 public class EntityChangedEvent {
 
-    public EntityChangedEvent(EntityInterface entity) {
+    public EntityChangedEvent(IEntity entity) {
 
     }
 

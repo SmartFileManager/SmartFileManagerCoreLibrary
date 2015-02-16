@@ -18,7 +18,7 @@ import java.util.List;
  *
  * @author ToNio
  */
-abstract public class AbstractFile implements gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.EntityInterface {
+abstract public class AbstractFile implements gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity {
 
     protected AbstractFile parent;
     protected String name;
@@ -118,5 +118,5 @@ abstract public class AbstractFile implements gr.teicm.pm.smartfilemanager.corel
 
     abstract protected String getFullName();
 
-    abstract protected List<AbstractFile> getAllChildren() throws gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.EntityNotFolderishException;
+    abstract protected List<AbstractFile> getAllChildren() throws gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.exceptions.EntityNotFolderishException;
 }
