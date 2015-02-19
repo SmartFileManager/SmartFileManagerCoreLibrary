@@ -11,4 +11,5 @@ package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces;
  */
 public interface IEntity {
 
+    
 }

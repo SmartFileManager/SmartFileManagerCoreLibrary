@@ -15,7 +15,7 @@ import java.util.List;
  */
 public interface LogicFacade {
 
-    public List<IEntity> getRootEntity();
+    public List<IEntity> getRootEntity(); 
 
     public String getEntitySize(IEntity entity);
 
