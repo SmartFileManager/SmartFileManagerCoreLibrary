@@ -7,6 +7,7 @@ package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces;
 
 import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity;
 import java.util.Collection;
+import java.util.List;
 
 /**
  *
@@ -14,7 +15,7 @@ import java.util.Collection;
  */
 public interface LogicFacade {
 
-    public IEntity getRootEntity();
+    public List<IEntity> getRootEntity();
 
     public String getEntitySize(IEntity entity);
 
