@@ -17,12 +17,12 @@ import java.util.List;
  */
 public class FileSystemRootNode extends AbstractFile {
 
-    private List<AbstractFile> children;
+    private List<AbstractFile> rootfs;
 
-    protected FileSystemRootNode() throws IOException {
+    public FileSystemRootNode() throws IOException {
         super("", null);
         super.setAlias("ParentOfRootDirs");
-        this.children = new ArrayList<>();
+        this.rootfs = new ArrayList<>();
         intializeChildren();
     }
 
@@ -34,13 +34,13 @@ public class FileSystemRootNode extends AbstractFile {
     private void intializeChildren() throws IOException {
         Iterable<Path> fileSystems = FileSystems.getDefault().getRootDirectories();
         for (Path fileSystem : fileSystems) {
-            children.add(new RootChild(fileSystem, this));
+            rootfs.add(new RootChild(fileSystem, this));
         }
     }
 
     @Override
     protected List<AbstractFile> getAllChildren() {
-        return children;
+        return rootfs;
     }
 
     @Override

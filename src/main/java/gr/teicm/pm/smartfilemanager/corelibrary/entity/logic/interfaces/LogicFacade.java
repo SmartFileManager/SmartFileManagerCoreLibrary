@@ -5,7 +5,6 @@
  */
 package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces;
 
-import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity;
 import java.util.Collection;
 import java.util.List;
 
@@ -15,28 +14,91 @@ import java.util.List;
  */
 public interface LogicFacade {
 
-    public List<IEntity> getRootEntity(); 
+    /**
+     * Gets all the system drives
+     *
+     * @return List of root drives C:\ D:\ in windows or /dev/sdax in unix like
+     * systems - sth that implements IEntity (AbstractFile).
+     */
+    public List<? extends IEntity> getRootEntity();
 
+    /**
+     * Gets the entity size
+     *
+     * @param entity the entity that you it's size
+     * @return entity size
+     */
     public String getEntitySize(IEntity entity);
 
     public String getEntityLastModified(IEntity entity);
 
+    /**
+     * Determines if you can read an entity
+     *
+     * @param entity the entity that you refer to
+     * @return boolean if you can read an entity
+     */
     public boolean isEntityReadable(IEntity entity);
 
+    /**
+     * Determines if you can write to an entity
+     *
+     * @param entity the entity that you refer to
+     * @return boolean if you can write to the entity
+     */
     public boolean isEntityWriteable(IEntity entity);
 
+    /**
+     * Determines if an entity contains other entities
+     *
+     * @param entity the entity that you refer to
+     * @return boolean if there are other entities contained
+     */
     public boolean isFolderish(IEntity entity);
 
+    /**
+     * Gets all the entities contained within an entity
+     *
+     * @param entity the entity that contains other entities
+     * @return boolean if there are other entities contained
+     */
     public Collection getAllChildren(IEntity entity);
 
+    /**
+     * Renames an entity
+     * 
+     * @param entity the entity that you want to rename
+     */
     public void rename(IEntity entity);
 
+    /**
+     * Deletes an entity
+     * 
+     * @param entity the entity that you want to delete
+     */
     public void delete(IEntity entity);
 
+    /**
+     * Performs cut operation
+     * 
+     * @param entity the entity that you want to cut
+     */
     public void cut(IEntity entity);
-
+    
+    /**
+     * Performs copy operation
+     * 
+     * @param entity the entity that you want to copy
+     */
     public void copy(IEntity entity);
-
+    
+    /**
+     * Performs paste operation
+     * pastes an entity
+     * 
+     * @param entity the entity that you want to paste
+     * @param newName the entity's new name
+     */
     public void paste(IEntity entity, String newName);
 
     public void addEntityChangeListener(EntityChangedListener listener);
