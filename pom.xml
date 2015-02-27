@@ -5,7 +5,7 @@
     <artifactId>smartfilemanagercoreLibrary</artifactId>
     <version>0.0.5</version>
     <packaging>jar</packaging>
-    <!--  deploy project with mvn clean javadoc:jar verify source:jar gpg:sign deploy   -->
+    <!--  deploy project with mvn clean javadoc:jar source:jar verify  gpg:sign deploy   -->
     <name>${project.groupId}:${project.artifactId}</name>
     <description>A library with common components needed for the ui to work</description>
     <url>https://github.com/SmartFileManager</url>
