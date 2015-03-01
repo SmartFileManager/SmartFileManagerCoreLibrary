@@ -74,7 +74,7 @@ public class RootChild extends AbstractFile {
     }
 
     @Override
-    protected List<AbstractFile> getAllChildren() throws EntityNotFolderishException {
+    public List<AbstractFile> getAllChildren() throws EntityNotFolderishException {
         children = getContents(file);
         return (children);
     }

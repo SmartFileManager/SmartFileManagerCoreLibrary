@@ -39,7 +39,7 @@ public class FileSystemRootNode extends AbstractFile {
     }
 
     @Override
-    protected List<AbstractFile> getAllChildren() {
+    public List<AbstractFile> getAllChildren() {
         return rootfs;
     }
 

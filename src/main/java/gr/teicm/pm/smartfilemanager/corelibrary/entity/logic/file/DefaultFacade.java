@@ -20,6 +20,10 @@ import java.util.logging.Logger;
  * @author user
  */
 public class DefaultFacade implements LogicFacade{
+
+    public DefaultFacade() {
+        
+    }
     private List<? extends IEntity> root;
     private FileSystemRootNode rootfs;
     @Override

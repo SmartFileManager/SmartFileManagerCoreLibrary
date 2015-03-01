@@ -34,7 +34,7 @@ public class RegularFile extends AbstractFile {
     }
 
     @Override
-    protected List<AbstractFile> getAllChildren() throws EntityNotFolderishException {
+    public List<AbstractFile> getAllChildren() throws EntityNotFolderishException {
         throw new EntityNotFolderishException();
     }
 

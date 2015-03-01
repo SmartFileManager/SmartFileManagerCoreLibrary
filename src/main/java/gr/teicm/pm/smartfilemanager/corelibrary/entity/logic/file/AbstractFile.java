@@ -118,5 +118,5 @@ abstract public class AbstractFile implements gr.teicm.pm.smartfilemanager.corel
 
     abstract protected String getFullName();
 
-    abstract protected List<AbstractFile> getAllChildren() throws gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.exceptions.EntityNotFolderishException;
+    abstract public List<AbstractFile> getAllChildren() throws gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.exceptions.EntityNotFolderishException;
 }
