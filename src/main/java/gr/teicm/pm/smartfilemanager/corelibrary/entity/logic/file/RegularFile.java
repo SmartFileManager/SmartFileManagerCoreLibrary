@@ -6,6 +6,7 @@
 package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.file;
 
 import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.exceptions.EntityNotFolderishException;
+import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IFileProperties;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Date;
@@ -46,5 +47,10 @@ public class RegularFile extends AbstractFile {
     @Override
     protected String getFullName() {
         return (getName());
+    }
+
+    @Override
+    public IFileProperties getProperties() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

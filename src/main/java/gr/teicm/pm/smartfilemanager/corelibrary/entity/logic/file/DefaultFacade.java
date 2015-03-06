@@ -6,7 +6,7 @@
 package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.file;
 
 import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.EntityChangedListener;
-import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity;
+import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IFile;
 import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.LogicFacade;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,13 +24,13 @@ public class DefaultFacade implements LogicFacade{
     public DefaultFacade() {
         
     }
-    private List<? extends IEntity> root;
-    private FileSystemRootNode rootfs;
+    private List<? extends IFile> root;
+    private IVolumeRoot rootfs;
     @Override
-    public List<? extends IEntity> getRootEntity() {
+    public List<? extends IFile> getRootEntity() {
         root = new ArrayList<>();
         try {
-            rootfs = new FileSystemRootNode();
+            rootfs = new IVolumeRoot();
             root = rootfs.getAllChildren();
 
         } catch (IOException ex) {
@@ -41,57 +41,57 @@ public class DefaultFacade implements LogicFacade{
     }
 
     @Override
-    public String getEntitySize(IEntity entity) {
+    public String getEntitySize(IFile entity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public String getEntityLastModified(IEntity entity) {
+    public String getEntityLastModified(IFile entity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean isEntityReadable(IEntity entity) {
+    public boolean isEntityReadable(IFile entity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean isEntityWriteable(IEntity entity) {
+    public boolean isEntityWriteable(IFile entity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean isFolderish(IEntity entity) {
+    public boolean isFolderish(IFile entity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Collection getAllChildren(IEntity entity) {
+    public Collection getAllChildren(IFile entity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void rename(IEntity entity) {
+    public void rename(IFile entity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void delete(IEntity entity) {
+    public void delete(IFile entity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void cut(IEntity entity) {
+    public void cut(IFile entity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void copy(IEntity entity) {
+    public void copy(IFile entity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void paste(IEntity entity, String newName) {
+    public void paste(IFile entity, String newName) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

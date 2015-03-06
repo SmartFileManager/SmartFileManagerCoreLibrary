@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.file;
+package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.drives;
 
 import java.io.IOException;
 import java.nio.file.FileSystems;
@@ -13,21 +13,22 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.exceptions.EntityNotFolderishException;
+import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.file.AbstractFile;
+import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.file.PathNameSanitization;
+import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IFileProperties;
 
 /**
  *
  * @author theweb
  */
-public class RootChild extends AbstractFile {
+public class SystemDrive extends AbstractFile {
 
     private PathNameSanitization childName;
     private List<AbstractFile> children;
     private Path file;
     private Date date;
 
-    //   private File rootDir;
-
-    protected RootChild(Path name, AbstractFile parent) throws IOException {
+    public SystemDrive(Path name, AbstractFile parent) throws IOException {
         super(name.toString(), parent);
         childName = new PathNameSanitization(name.toString());
         setAlias(childName.getOnlyLetter() + " Drive");
@@ -41,7 +42,7 @@ public class RootChild extends AbstractFile {
     private void intializeChildren() throws IOException {
         Iterable<Path> fileSystems = FileSystems.getDefault().getRootDirectories();
         for (Path fileSystem : fileSystems) {
-            children.add(new RootChild(fileSystem, this));
+            children.add(new SystemDrive(fileSystem, this));
         }
     }
 
@@ -77,5 +78,10 @@ public class RootChild extends AbstractFile {
     public List<AbstractFile> getAllChildren() throws EntityNotFolderishException {
         children = getContents(file);
         return (children);
+    }
+
+    @Override
+    public IFileProperties getProperties() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

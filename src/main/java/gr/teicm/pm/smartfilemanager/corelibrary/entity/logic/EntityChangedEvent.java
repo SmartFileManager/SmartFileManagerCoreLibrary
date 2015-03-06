@@ -5,7 +5,7 @@
  */
 package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic;
 
-import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity;
+import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IFile;
 
 /**
  *
@@ -13,7 +13,7 @@ import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity;
  */
 public class EntityChangedEvent {
 
-    public EntityChangedEvent(IEntity entity) {
+    public EntityChangedEvent(IFile entity) {
 
     }
 

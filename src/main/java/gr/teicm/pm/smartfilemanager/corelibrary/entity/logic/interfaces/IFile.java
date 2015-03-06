@@ -9,7 +9,6 @@ package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces;
  *
  * @author ToNio
  */
-public interface IEntity {
-
-    
+public interface IFile {
+    IFileProperties getProperties();    
 }

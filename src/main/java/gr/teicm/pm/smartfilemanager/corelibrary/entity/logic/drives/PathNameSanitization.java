@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.file;
+package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.drives;
 
 public class PathNameSanitization {
 
@@ -13,11 +13,11 @@ public class PathNameSanitization {
     }
 
     ;
-    public PathNameSanitization(String rootChildName) {
+    protected PathNameSanitization(String rootChildName) {
         this.userPath = rootChildName;
     }
 
-    public String getDrive() {
+    protected String getDrive() {
         return (getOnlyLetter() + ":" + "\\");
     }
 
@@ -25,7 +25,7 @@ public class PathNameSanitization {
         return (this.userPath);
     }
 
-    public String getOnlyLetter() {
+    protected String getOnlyLetter() {
         return (this.userPath.substring(0, 1));
     }
 

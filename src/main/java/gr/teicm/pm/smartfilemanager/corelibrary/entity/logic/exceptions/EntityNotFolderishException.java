@@ -5,7 +5,7 @@
  */
 package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.exceptions;
 
-import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity;
+import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IFile;
 
 /**
  *
@@ -13,10 +13,10 @@ import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity;
  */
 public class EntityNotFolderishException extends Exception {
 
-    private IEntity entity;
+    private IFile entity;
     private String reason;
 
-    public EntityNotFolderishException(IEntity entity, String reason) {
+    public EntityNotFolderishException(IFile entity, String reason) {
         this.entity = entity;
         this.reason = reason;
     }
@@ -24,7 +24,7 @@ public class EntityNotFolderishException extends Exception {
     public EntityNotFolderishException() {
     }
 
-    public IEntity getEntity() {
+    public IFile getEntity() {
         return this.entity;
     }
 

@@ -18,7 +18,7 @@ import java.util.List;
  *
  * @author ToNio
  */
-abstract public class AbstractFile implements gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity {
+abstract public class AbstractFile implements gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IFile {
 
     protected AbstractFile parent;
     protected String name;

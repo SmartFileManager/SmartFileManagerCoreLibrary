@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>gr.teicm.pm.smartfilemanager</groupId>
-    <artifactId>smartfilemanagercoreLibrary</artifactId>
+    <artifactId>smartfilemanagercorelibrary</artifactId>
     <version>0.0.5</version>
     <packaging>jar</packaging>
     <!--  deploy project with mvn clean javadoc:jar source:jar verify  gpg:sign deploy   -->
@@ -27,8 +27,8 @@
         <connection>scm:git:git://github.com:SmartFileManager/SmartFileManagerCoreLibrary.git</connection>
         <developerConnection>scm:git:git:@github.com:SmartFileManager/SmartFileManagerCoreLibrary.git</developerConnection>
         <url>scm:git:git:@github.com:SmartFileManager/SmartFileManagerCoreLibrary.git</url>
-      <tag>${project.version}}</tag>
-  </scm>
+        <tag>${project.version}}</tag>
+    </scm>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
@@ -54,7 +54,12 @@
     </distributionManagement>
 
     <dependencies>
-
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3.2</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     <build>
         <pluginManagement>

@@ -5,7 +5,7 @@
  */
 package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.exceptions;
 
-import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity;
+import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IFile;
 
 /**
  *
@@ -13,14 +13,14 @@ import gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces.IEntity;
  */
 public class EntityRenameFailedException extends Exception {
 
-    private IEntity entity;
+    private IFile entity;
     private String reason;
 
-    public EntityRenameFailedException(IEntity entity, String reason) {
+    public EntityRenameFailedException(IFile entity, String reason) {
 
     }
 
-    public IEntity getEntity() {
+    public IFile getEntity() {
         return this.entity;
     }
 
