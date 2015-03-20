@@ -5,11 +5,13 @@
  */
 package gr.teicm.pm.smartfilemanager.corelibrary.entity.logic.interfaces;
 
+import java.util.List;
+
 /**
  *
  * @author user
  */
 public interface ISystemDrive extends IFile{
-    IVolume getVolumes();
+    List<IVolume> getVolumes();
     
 }
